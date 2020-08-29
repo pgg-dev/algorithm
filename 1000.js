@@ -6,7 +6,9 @@ const rl = readline.createInterface({
 });
 
 rl.on("line", (input) => {
-  const answer = input.split(" ").reduce((acc, num) => acc + Number(num), 0);
+  const answer = String(input)
+    .split(" ")
+    .reduce((acc, num) => acc + Number(num), 0);
   console.log(answer);
   rl.close();
 }).on("close", () => {
